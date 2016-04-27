@@ -2,7 +2,7 @@
   "name": "nodejs-getting-started",
   "version": "1.0.0",
   "description": "End to end sample for running Node.JS applications on Google Cloud Platform",
-  "repository": "https://github.com/GoogleCloudPlatform/nodejs-getting-started",
+  "repository": "https://github.com/mpreet/preets.git",
   "private": true,
   "scripts": {
     "start": "node app.js",
