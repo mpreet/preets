@@ -1,0 +1,40 @@
+{
+  "name": "offline-news",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "clean": "git clean -fxd",
+    "start": "node index.js",
+    "test": "npm run jshint && npm run lintspaces",
+    "jshint": "jshint `npm run -s js-files`",
+    "lintspaces": "lintspaces -n -t -d spaces -i js-comments -s 2 `npm run -s js-files`",
+    "js-files": "find . -name '*.js' ! -path './node_modules/*' ! -name 'promise.js' ! -name 'indexeddb.shim.min.js' ! -name 'cache.shim.js' ! -name 'caches-polyfill.js'",
+    "deploy": "gcloud preview app deploy app.yaml"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/matthew-andrews/offline-news.git"
+  },
+  "author": "manpreet/Kamaljeet",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/matthew-andrews/offline-news/issues"
+  },
+  "homepage": "https://github.com/matthew-andrews/offline-news",
+  "private": true,
+  "dependencies": {
+    "es6-promise": "^2.0.0",
+    "express": "^4.13.4",
+    "gulp-install": "^0.6.0",
+    "haikro": "^1.5.2",
+    "isomorphic-fetch": "^1.1.0"
+  },
+  "devDependencies": {
+    "jshint": "^2.5.5",
+    "lintspaces-cli": "0.0.4"
+  },
+  "engines": {
+    "node": "0.10.x"
+  }
+}
